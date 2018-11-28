@@ -61,7 +61,7 @@ logtalk_library_path(unit_test_1, unit_tests('unit_test_1/')).
 
 :- initialization((	
 	set_logtalk_flag(portability, silent),
-	set_logtalk_flag(plredef, silent),
+%	set_logtalk_flag(plredef, silent),
 	
 	set_prolog_flag(verbose_load, false),
 	set_prolog_flag(verbose, silent),

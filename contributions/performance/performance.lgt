@@ -7,10 +7,6 @@
 		date is 2011/07/12,
 		comment is 'Performance monitor for state space searches.']).
 
-	:- uses(event_registry).
-	:- uses(before_event_registry).
-	:- uses(after_event_registry).
-
 	:- uses(list, [length/2]).
 	:- uses(numberlist, [min/2, max/2, sum/2]).
 	:- uses(time, [cpu_time/1]).
