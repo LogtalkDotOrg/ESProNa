@@ -19,11 +19,11 @@
 			comment is 'This perspective is conform when the given operational constraints evaluate to true.']).
 	
 		:- public(operational_constraint/5).
-		:- mode(organizational_constraint(+list(actions), +modelstate, +instance_identifier, ?list(tool_identifiers), +callable), 
+		:- mode(operational_constraint(+list(actions), +modelstate, +instance_identifier, ?list(tool_identifiers), +callable), 
 				zero_or_more).
 					
 		:- public(operational_constraint/6).
-		:- mode(organizational_constraint(+modal_prefix, +list(actions), +modelstate, +instance_identifier, ?list(tool_identifiers), +callable), 
+		:- mode(operational_constraint(+modal_prefix, +list(actions), +modelstate, +instance_identifier, ?list(tool_identifiers), +callable), 
 				zero_or_more).
 		:- info(operational_constraint/6, [
 			comment is 'Contains the POPM constraints of the operational perspective.']).

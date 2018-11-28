@@ -100,7 +100,7 @@
 		get_process_state(PID, ProcessState) :-
 			parameter(1, ProcessStatesList),
 			ProcessState = process_state(PID, _),
-			list:memberchk(ProcessState, ProcessStatesList).			
+			list::memberchk(ProcessState, ProcessStatesList).			
 			
 		/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 		   	model_state_changes/7

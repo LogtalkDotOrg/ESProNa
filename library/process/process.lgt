@@ -106,7 +106,7 @@
 			
 			% Data production:
 			(	::data_production(ActionListData, Data), 
-				list:member(Action, ActionListData) ->
+				list::member(Action, ActionListData) ->
 				true
 			;
 				Data = []

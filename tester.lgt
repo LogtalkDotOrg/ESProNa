@@ -12,7 +12,7 @@
 
 :- initialization((
 	set_logtalk_flag(report, warnings),
-	logtalk_load(library(lgtunit_loader)),
+	logtalk_load(lgtunit(loader)),
 	logtalk_load(loader),
 	logtalk_load(unit_tests(tests), [hook(lgtunit)]),
 	logtalk_load(unit_test_1(loader)),

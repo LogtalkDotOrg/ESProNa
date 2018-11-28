@@ -28,7 +28,7 @@
 		:- info(data_constraint/6, [
 			comment is 'Contains the POPM constraints of the data perspective.']).
 		
-		:- public(data_production/2).
+		:- public(data_constraint/2).
 		:- mode(data_constraint(+var, +list), zero_or_one).
 		:- info(data_constraint/2, [
 			comment is 'Stores which data is produced (2nd argument) during a certain action (1st argument).']).

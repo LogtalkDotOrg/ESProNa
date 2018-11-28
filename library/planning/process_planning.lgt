@@ -125,6 +125,7 @@
 		/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 		   	navigate/5
 		   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+		:- meta_predicate(navigate(*, *, *, *, *)).
 		navigate(ProcessModelID, FromState, ToState, Path, Conditions) :-
 			esprona_depth_first(6)::solve(ProcessModelID, process_planning, FromState, ToState, Path),
 			{Conditions}.
@@ -132,6 +133,7 @@
 		/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 		   	navigate/6
 		   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+		:- meta_predicate(navigate(*, *, *, *, *, *)).
 		navigate(ProcessModelID, InState, ToState, Path, Costs, Conditions) :-
 			esprona_hill_climbing(15)::solve(ProcessModelID, process_planning, InState, ToState, Path, Costs),
 			{Conditions}.

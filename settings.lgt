@@ -11,5 +11,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 :- initialization((
-	set_logtalk_flag(report, off)
+	set_logtalk_flag(report, on)
 )).

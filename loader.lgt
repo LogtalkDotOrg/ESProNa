@@ -13,6 +13,7 @@
 :- multifile(logtalk_library_path/2).
 :- dynamic(logtalk_library_path/2).
 
+:- use_module(library(ugraphs)).
 :- use_module(library(aggregate)).
 :- use_module(library(clpfd)).
 :- use_module(library(lists)).

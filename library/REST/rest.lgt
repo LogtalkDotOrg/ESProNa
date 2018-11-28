@@ -34,9 +34,9 @@
 		   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */									
 		:- public(distributor/1).
 			distributor(Request) :-
-				memberchk(method(post), Request),
+				list::memberchk(method(post), Request),
 			
-				memberchk(request_uri(PathModelID), Request),
+				list::memberchk(request_uri(PathModelID), Request),
 
 				% matching / and fork to predicate 'say_hi'
 				(	PathModelID = '/' ->
@@ -83,7 +83,7 @@
 		   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */		
 		:- public(available_process_models/1).
 		available_process_models(Request) :-
-			memberchk(method(post), Request),
+			list::memberchk(method(post), Request),
 			
 			findall(	json([ 	id = ProcessModel,
 								name = Title ]),
@@ -105,7 +105,7 @@
 		   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */	
 		:- public(initial_state/2).
 		initial_state(Request, ModelID) :-
-			memberchk(method(post), Request),
+			list::memberchk(method(post), Request),
 						
 			% Check if a process of that specific model model has already been loaded. If not then load the model.	
 			(	\+ (	extends_object(Process, process),
@@ -149,7 +149,7 @@
 		   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 		:- public(validate_actions/2).
 		validate_actions(Request, ModelID) :-		
-			memberchk(method(post), Request),
+			list::memberchk(method(post), Request),
 			
 			/*
 			?- 	ERROR: [Thread httpd@2600_3] stream_property/2: stream `<stream>(0x101559530)' does not exist
@@ -183,12 +183,12 @@
 			
 			% rebuild the state from the JSON-object			
 			findall(	process_state(Process_ID, Process_HistoryTerm),
-						(	member(M, ProcessStateMemberList),
+						(	list::member(M, ProcessStateMemberList),
 							M = json([	object_name = 'process_state',
 										process_id = Process_ID,
 										process_history = Process_HistoryString
 								]),
-							string_to_atom(Process_HistoryString, Process_HistoryAtom),
+							atom_string(Process_HistoryAtom, Process_HistoryString),
 							atom_to_term(Process_HistoryAtom, Process_HistoryTerm, _)	
 						),
 						JSONProcessStatesList
@@ -233,7 +233,7 @@
 		   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 		:- public(perform_action/4).
 		perform_action(Request, ModelID, ProcessID, Action) :-		
-			memberchk(method(post), Request),
+			list::memberchk(method(post), Request),
 					
 			{http_json:http_read_json(Request, JSONIn)},
         	{json_convert:json_to_prolog(JSONIn, PrologIn)},
@@ -266,7 +266,7 @@
 			
 			% rebuild the state from the JSON-object			
 			findall(	process_state(Process_ID, Process_History),
-						(	member(M, OldProcessStatesList),
+						(	list::member(M, OldProcessStatesList),
 							M = json([	object_name = 'process_state',
 										process_id = Process_ID,
 										process_history = Process_History
@@ -289,7 +289,7 @@
 						(	list::member(ProcessState, NewProcessStatesList),
 							ProcessState = process_state(Process_ID, Process_History),
 							term_to_atom(Process_History, Process_HistoryAtom),
-							string_to_atom(Process_HistoryAtom, Process_HistoryString)	
+							atom_string(Process_HistoryAtom, Process_HistoryString)	
 						),
 						JSONProcessStatesList
 			),
@@ -308,8 +308,8 @@
 		   	Message when accessing the root document
 		   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */	
 		:- public(say_hi/1).
-		say_hi(Request) :-
-			%write(Request),
+		say_hi(_Request) :-
+			%write(_Request),
 	        {html_write:reply_html_page(title('ESProNa'),
 	        							table(	[	width('100%'),
 													border(0)],
