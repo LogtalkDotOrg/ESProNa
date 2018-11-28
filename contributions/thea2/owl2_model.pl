@@ -1144,6 +1144,7 @@ owl2_model_init :-
 	assert(annotationProperty('http://www.w3.org/2000/01/rdf-schema#comment')).
 
 consult_axioms(File) :-
+	writeln(File),
         consult(File).
 
 
