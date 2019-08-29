@@ -151,6 +151,7 @@
 				Process::process_domain(Refs, _),
 				list::memberchk(Self, Refs) ->
 				true		% We cut here, because one successful evaluation in the second case is already enough.
+			;	fail
 			).
 			
 		/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

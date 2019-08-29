@@ -69,7 +69,6 @@ logtalk_library_path(unit_test_1, unit_tests('unit_test_1/')).
 	
 	logtalk_load(library(types_loader)),
 	logtalk_load(library(metapredicates_loader)),
-	logtalk_load(library(pairs), [reload(skip)]),
 	logtalk_load(library(dates_loader)),	
 	logtalk_load(roots(loader)),
 	

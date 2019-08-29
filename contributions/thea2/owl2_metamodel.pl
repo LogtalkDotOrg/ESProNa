@@ -131,7 +131,8 @@ owlpredicate_arguments(negativeDataPropertyAssertion, [dataPropertyExpression, i
 
 % for sql_compiler
 
-:- discontiguous(relation/2,attribute/4).
+:- discontiguous(relation/2).
+:- discontiguous(attribute/4).
 
 relation('Class',1).
 attribute(1,'Class','IRI',string).
