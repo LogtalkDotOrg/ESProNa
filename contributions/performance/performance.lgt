@@ -2,9 +2,9 @@
 	implements(monitoring)).	% built-in protocol for event handler methods
 
 	:- info([
-		version is 1.4,
+		version is 1:4:0,
 		author is 'Written by Paulo Moura, adopted to ESProNa by Michael Igler',
-		date is 2011/07/12,
+		date is 2011-07-12,
 		comment is 'Performance monitor for state space searches.']).
 
 	:- uses(list, [length/2]).

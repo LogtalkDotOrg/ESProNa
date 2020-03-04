@@ -14,8 +14,8 @@
 	instantiates(heuristic_state_space)).
 				
 		:- info([
-			version is 0.8,
-			date is 2011/03/03,
+			version is 0:8:0,
+			date is 2011-03-03,
 			author is 'Michael Igler (michael.igler@uni-bayreuth.de)',
 			comment is 'Process planning object to enable ProcessNavigation in ESProNa.']).	
 

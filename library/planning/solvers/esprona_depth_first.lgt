@@ -14,9 +14,9 @@
 	instantiates(esprona_blind_search(Bound))).
 
 	:- info([
-		version is 1.2,
+		version is 1:2:0,
 		author is 'Written by Paulo Moura, adopted to ESProNa by Michael Igler',
-		date is 2009/12/3,
+		date is 2009-12-03,
 		comment is 'Depth first state space search strategy.',
 		parnames is ['Bound']]).
 

@@ -14,8 +14,8 @@
 	implements(heuristic_protocol)).
 			
 		:- info([
-			version is 0.8,
-			date is 2011/04/6,
+			version is 0:8:0,
+			date is 2011-04-06,
 			author is 'Michael Igler (michael.igler@uni-bayreuth.de)',
 			comment is 'Predicates for heuristic searching and planning algorithms of the behavioral perspective.']).
 					

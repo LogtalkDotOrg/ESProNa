@@ -14,9 +14,9 @@
 	instantiates(esprona_heuristic_search(Threshold))).
 
 	:- info([
-		version is 1.2,
+		version is 1:2:0,
 		author is 'Written by Paulo Moura, adopted to ESProNa by Michael Igler',
-		date is 2009/12/3,
+		date is 2009-12-03,
 		comment is 'Hill climbing heuristic state space search strategy.',
 		parnames is ['Threshold']]).
 

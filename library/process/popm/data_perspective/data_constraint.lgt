@@ -13,8 +13,8 @@
 :- category(data_constraint).
 	
 		:- info([
-			version is 0.8,
-			date is 2009/10/15,
+			version is 0:8:0,
+			date is 2009-10-15,
 			author is 'Michael Igler (michael.igler@uni-bayreuth.de)',
 			comment is 'This perspective is conform when the given data constraints evaluate to true.']).
 	

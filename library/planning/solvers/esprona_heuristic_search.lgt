@@ -15,9 +15,9 @@
 	specializes(esprona_search_strategy)).
 
 	:- info([
-		version is 1.0,
+		version is 1:0:0,
 		author is 'Written by Paulo Moura, adopted to ESProNa by Michael Igler',
-		date is 2009/12/3,
+		date is 2009-12-03,
 		comment is 'Heuristic state space search strategies.',
 		parnames is ['Threshold']]).
 

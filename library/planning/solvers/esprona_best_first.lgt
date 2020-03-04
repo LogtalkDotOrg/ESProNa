@@ -14,9 +14,9 @@
 	instantiates(esprona_heuristic_search(Threshold))).
 
 	:- info([
-		version is 1.2,
+		version is 1:2:0,
 		author is 'Written by Paulo Moura, adopted to ESProNa by Michael Igler',
-		date is 2008/6/9,
+		date is 2008-06-09,
 		comment is 'Best first heuristic state space search strategy.',
 		source is 'Example adapted from the book "Prolog Programming for Artificial Intelligence" by Ivan Bratko.',
 		parnames is ['Threshold']]).

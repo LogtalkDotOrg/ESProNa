@@ -3,9 +3,9 @@
 	specializes(object)).
 
 	:- info([
-		version is 1.2,
+		version is 1:2:0,
 		author is 'Written by Paulo Moura, adopted to ESProNa by Michael Igler',
-		date is 2011/3/20,
+		date is 2011-03-20,
 		comment is 'State space description predicates including navigation.']).
 
 	:- public(initial_state/2).

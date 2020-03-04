@@ -3,9 +3,9 @@
 	specializes(state_space)).
 
 	:- info([
-		version is 1.1,
+		version is 1:1:0,
 		author is 'Written by Paulo Moura, adopted to ESProNa by Michael Igler',
-		date is 2011/3/20,
+		date is 2011-03-20,
 		comment is 'Heuristic state space description predicates including navigation.']).
 
 	:- public(next_state/4).

@@ -13,8 +13,8 @@
 :- object(model_state(_ProcessStatesList, _ModelDoneCode)).
 
 		:- info([
-			version is 0.8,
-			date is 2010/04/19,
+			version is 0:8:0,
+			date is 2010-04-19,
 			author is 'Michael Igler (michael.igler@uni-bayreuth.de)',
 			comment is 'Represents the state of the process model.']).
 		

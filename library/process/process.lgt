@@ -14,8 +14,8 @@
 	imports((functional_constraint, behavioral_constraint, organizational_constraint, data_constraint, operational_constraint))).
 
 	:- info([
-		version is 0.8,
-		date is 2011/03/03,
+		version is 0:8:0,
+		date is 2011-03-03,
 		author is 'Michael Igler (michael.igler@uni-bayreuth.de)',
 		comment is 'Describes the process object as a composition of all POPM perspectives.'
 	]).

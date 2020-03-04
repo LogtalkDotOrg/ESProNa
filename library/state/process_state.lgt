@@ -13,8 +13,8 @@
 :- object(process_state(_Process_ID, _Process_History)).
 
 		:- info([
-			version is 0.8,
-			date is 2010/04/19,
+			version is 0:8:0,
+			date is 2010-04-19,
 			author is 'Michael Igler (michael.igler@uni-bayreuth.de)',
 			comment is 'Represents the state of a process containing Process_ID, Process_History_List, Process_Status.']).
 
